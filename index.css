@@ -1,0 +1,94 @@
+:root {
+    --font: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --mediumFont: "Ubuntu Medium", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --linkColour: #ffa0a0;
+    --grey: #c2c2c2;
+}
+
+body {
+    padding: 20px;
+    font-family: var(--font);
+    background-color: #2b272d;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.subtitle {
+    margin: 0;
+    color: #c2c2c2;
+    font-family: var(--mediumFont);
+    background-color: #2b272d;
+}
+
+h2 {
+    font-family: var(--mediumFont);
+    margin: 0;
+    margin-top: 30px;
+    font-size: 15px;
+    color: var(--grey);
+}
+
+.at {
+    font-family: var(--font);
+    color: var(--linkColour);
+}
+
+.project {
+    margin-top: 8px;
+    color: #b1b1b1;
+}
+
+.project .language {
+    display: inline-block;
+    font-family: var(--mediumFont);
+    font-size: 15px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.crystal {
+    color: #8f8f8f;
+}
+
+.project .link {
+    color: var(--linkColour);
+    font-style: italic;
+    font-size: 15px;
+}
+
+.project .seperator {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.project .name {
+    color: #fff;
+    font-size: 16px;
+}
+
+.project .description {
+    display: inline-block;
+    color: var(--grey);
+    font-size: 15px;
+    margin: 0;
+    margin-left: 10px;
+}
