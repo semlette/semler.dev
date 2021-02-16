@@ -1,61 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>semler.dev</title>
-        <meta name="theme-color" content="#1D191E" />
-        <meta
-            name="description"
-            content="open source projects by Andi Semler @semlette"
-        />
-        <base target="_blank" />
-        <link rel="stylesheet" href="index.css" />
-    </head>
-    <body>
-        <h1>semler.dev</h1>
-        <p class="subtitle">
-            open source projects by
-            <a href="https://andisemler.me" class="at">@semlette</a>
-        </p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Andi Semler</title>
+		<meta name="theme-color" content="#1D191E" />
+		<meta name="description" content="Andi Semler @semlette portfolio" />
+		<base target="_blank" />
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div id="rootContainer">
+			<span class="sectionTitle">semler.dev</span>
+			<h1>Andi Semler</h1>
+			<p id="whoami">
+				20 year old Dane with a big interest in computer programming
+			</p>
 
-        <h2>Dart & Flutter</h2>
-        <div class="project">
-            <a class="name" href="https://github.com/semlette/nfc_in_flutter"
-                >nfc_in_flutter</a
-            >
-            <p class="description">plugin for reading NFC in Flutter</p>
-        </div>
-        <div class="project">
-            <a
-                class="name"
-                href="https://github.com/semlette/flutter_to_mobilepay"
-                >flutter_to_mobilepay</a
-            >
-            <p class="description">
-                MobilePay integration for Flutter using the MobilePay AppSwitch
-                SDK
-            </p>
-        </div>
+			<nav id="linkList">
+				<div id="githubLink" class="linkListItem">
+					<a href="https://github.com/semlette">GitHub</a>
+					<hr />
+				</div>
 
-        <h2>Web</h2>
-        <div class="project">
-            <a class="name" href="https://github.com/semlette/anchor-scroller"
-                >anchor-scroller</a
-            >
-            <p class="description">
-                smoothly scroll to #anchors
-            </p>
-        </div>
+				<div id="cvLink" class="linkListItem">
+					<a href="/cv.pdf">CV</a>
+					<hr />
+				</div>
 
-        <h2>No longer maintained</h2>
-        <div class="project">
-            <span class="language crystal">crystal</span>
-            <a class="name" href="https://github.com/semlette/hatty">hatty</a>
-            <p class="description">
-                http server library
-            </p>
-        </div>
-    </body>
+				<div id="contactLink" class="linkListItem">
+					<a href="mailto:andirobinsemler@gmail.com">Contact</a>
+					<hr />
+				</div>
+			</nav>
+
+			<span class="sectionTitle">Portfolio</span>
+
+			<article id="loebsportalenShowcase" class="productShowcase">
+				<div class="productName">
+					<h2>
+						<a
+							href="https://loebsportalen.dk"
+							target="_blank"
+							rel="noreferrer noopener"
+							>Løbsportalen</a
+						>
+					</h2>
+					<hr />
+				</div>
+				<p>
+					Løbsportalen (<i>"the running event portal"</i>) is a
+					platform for Denmark's marathon runners, helping them find
+					their next marathon event.
+				</p>
+				<div class="productDetailsRow">
+					<span class="highlight">NEXT.JS</span>
+					<span class="highlight">REACT</span>
+					<span class="highlight">GO</span>
+					<span class="highlight">POSTGRESQL</span>
+					<span class="highlight">NGINX</span>
+					<span class="highlight">UBUNTU</span>
+				</div>
+			</article>
+
+			<article id="pbsShowcase" class="productShowcase">
+				<div class="productName">
+					<h2>
+						<a
+							href="https://probonoskills.com"
+							target="_blank"
+							rel="noreferrer noopener"
+							>Pro Bono Skills video platform</a
+						>
+					</h2>
+					<hr />
+				</div>
+				<p>
+					Video platform providing law students in Scotland who do pro
+					bono work with high quality training material and events.
+				</p>
+				<div class="productDetailsRow">
+					<span class="highlight">GO</span>
+					<span class="highlight">POSTGRESQL</span>
+					<span class="highlight">NGINX</span>
+					<span class="highlight">UBUNTU</span>
+				</div>
+			</article>
+
+			<article id="frilydShowcase" class="productShowcase">
+				<div class="productName">
+					<h2>
+						<a
+							href="http://frilyd.dk"
+							target="_blank"
+							rel="noreferrer noopener"
+							>frilyd.dk</a
+						>
+					</h2>
+					<hr />
+				</div>
+
+				<div class="productDetailsRow">
+					<span class="highlight">HTML/CSS/JAVASCRIPT</span>
+					<span class="highlight">GULP</span>
+				</div>
+			</article>
+
+			<article id="nfcInFlutterShowcase" class="productShowcase">
+				<div class="productName">
+					<h2>
+						<a
+							href="https://github.com/semlette/nfc_in_flutter"
+							target="_blank"
+							rel="noreferrer noopener"
+							>#1 Flutter NFC plugin</a
+						>
+					</h2>
+					<hr />
+				</div>
+
+				<div class="productDetailsRow">
+					<span class="highlight">FLUTTER</span>
+					<span class="highlight">ANDROID</span>
+					<span class="highlight">IOS</span>
+					<span class="highlight">JAVA</span>
+					<span class="highlight">OBJECTIVE-C</span>
+				</div>
+			</article>
+
+			<article id="flutterToMobilePayShowcase" class="productShowcase">
+				<div class="productName">
+					<h2>
+						<a
+							href="https://github.com/semlette/flutter_to_mobilepay"
+							target="_blank"
+							rel="noreferrer noopener"
+							>Flutter to MobilePay</a
+						>
+					</h2>
+					<hr />
+				</div>
+
+				<div class="productDetailsRow">
+					<span class="highlight">FLUTTER</span>
+					<span class="highlight">ANDROID</span>
+					<span class="highlight">IOS</span>
+					<span class="highlight">JAVA</span>
+					<span class="highlight">OBJECTIVE-C</span>
+				</div>
+			</article>
+		</div>
+	</body>
 </html>

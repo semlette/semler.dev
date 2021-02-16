@@ -1,94 +1,197 @@
 :root {
-    --font: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    --mediumFont: "Ubuntu Medium", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    --linkColour: #ffa0a0;
-    --grey: #c2c2c2;
+	--foregroundColour: #000;
+	--backgroundColour: #fff;
+	--underlineGradientOpacity: 1;
+	--highlightColour: #6c6c6c;
+	--buttonBackgroundColour: #000000;
+	--buttonForegroundColour: #ffffff;
+	--sectionTitleColour: #6b6b6b;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foregroundColour: #fff;
+		--backgroundColour: #000;
+		--underlineGradientOpacity: 0.7;
+		--highlightColour: #c4c4c4;
+		--buttonBackgroundColour: #525252;
+		--buttonForegroundColour: #fff;
+		--sectionTitleColour: #c4c4c4;
+	}
 }
 
 body {
-    padding: 20px;
-    font-family: var(--font);
-    background-color: #2b272d;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	padding: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background-color: var(--backgroundColour);
+	color: var(--foregroundColour);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    text-decoration: underline;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
 }
 
 h1 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 400;
+	padding: 0;
+	margin: 0;
 }
 
-.subtitle {
-    margin: 0;
-    color: #c2c2c2;
-    font-family: var(--mediumFont);
-    background-color: #2b272d;
+#whoami {
+	margin-top: 6px;
 }
 
-h2 {
-    font-family: var(--mediumFont);
-    margin: 0;
-    margin-top: 30px;
-    font-size: 15px;
-    color: var(--grey);
+p {
+	font-size: 1em;
+	font-weight: 500;
 }
 
-.at {
-    font-family: var(--font);
-    color: var(--linkColour);
+.sectionTitle {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 0.9em;
+	font-weight: 500;
+	color: var(--sectionTitleColour);
 }
 
-.project {
-    margin-top: 8px;
-    color: #b1b1b1;
+#linkList {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
 }
 
-.project .language {
-    display: inline-block;
-    font-family: var(--mediumFont);
-    font-size: 15px;
-    margin: 0;
-    margin-right: 10px;
+.linkListItem {
+	width: fit-content;
+	font-size: 1.75em;
+	font-weight: bold;
 }
 
-.crystal {
-    color: #8f8f8f;
+.linkListItem a {
+	display: block;
+	transition: 100ms transform ease-in-out;
+
+	position: relative;
+	z-index: 2;
 }
 
-.project .link {
-    color: var(--linkColour);
-    font-style: italic;
-    font-size: 15px;
+.linkListItem hr {
+	max-width: 300px;
+	height: 9px;
+	border-radius: 9px;
+	border: none;
+	background-color: var(--foregroundColour);
+	opacity: var(--underlineGradientOpacity);
+	margin-top: -8px;
+
+	transition: 100ms transform ease-in-out;
+
+	position: relative;
+	z-index: 1;
 }
 
-.project .seperator {
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+.linkListItem:hover a {
+	text-decoration: none;
+	transform: translateX(3px);
 }
 
-.project .name {
-    color: #fff;
-    font-size: 16px;
+.linkListItem:hover hr {
+	transform: translateX(5px);
 }
 
-.project .description {
-    display: inline-block;
-    color: var(--grey);
-    font-size: 15px;
-    margin: 0;
-    margin-left: 10px;
+#githubLink hr {
+	background: linear-gradient(to right, #ff6900, #ff469c);
+}
+
+#cvLink hr {
+	background: linear-gradient(to right, #2082ff, #44ffeb);
+}
+
+#contactLink hr {
+	background: linear-gradient(to right, #1b7aff, #dd63ff);
+}
+
+.productShowcase {
+	max-width: 500px;
+	margin-bottom: 20px;
+}
+
+.productName {
+	width: fit-content;
+}
+
+.productName h2 {
+	position: relative;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.25em;
+
+	position: relative;
+	z-index: 2;
+	transition: 100ms transform ease-in-out;
+}
+
+.productName hr {
+	margin-top: -3px;
+	margin-bottom: 0;
+	height: 4px;
+	border-radius: 4px;
+	border: none;
+	background-color: var(--foregroundColour);
+	opacity: var(--underlineGradientOpacity);
+
+	position: relative;
+	z-index: 1;
+	transition: 100ms transform ease-in-out;
+}
+
+.productName:hover h2 {
+	transform: translateX(4px);
+}
+
+.productName:hover hr {
+	transform: translateX(7px);
+}
+
+.productShowcase p {
+	margin-top: 4px;
+	margin-bottom: 6px;
+}
+
+.highlight {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: var(--highlightColour);
+}
+
+.highlight:not(:last-of-type) {
+	margin-right: 15px;
+}
+
+.productDetailsRow {
+	margin-top: 4px;
+}
+
+#loebsportalenShowcase hr {
+	background: linear-gradient(to right, #ff2f13, #ffa020);
+}
+
+#pbsShowcase hr {
+	background: linear-gradient(to right, #0ea8f6, #1370ff);
+}
+
+#frilydShowcase hr {
+	background: linear-gradient(to right, #ff20b4, #ff4444);
+}
+
+#nfcInFlutterShowcase hr {
+	background: linear-gradient(to right, #ffa344, #ffd720);
+}
+
+#flutterToMobilePayShowcase hr {
+	background: linear-gradient(to right, #595ce2, #be78ff);
 }
