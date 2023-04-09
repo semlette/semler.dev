@@ -115,7 +115,6 @@ p {
 }
 
 .productShowcase {
-	max-width: 500px;
 	margin-bottom: 20px;
 }
 
@@ -158,6 +157,7 @@ p {
 }
 
 .productShowcase p {
+	max-width: 500px;
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
@@ -182,6 +182,14 @@ p {
 
 #pbsShowcase hr {
 	background: linear-gradient(to right, #0ea8f6, #1370ff);
+}
+
+#draftShowcase hr {
+	background: linear-gradient(to right, #24e1db, #7fe035);
+}
+
+#tvfritidShowcase hr {
+	background: linear-gradient(to right, #4186ff, #9c4af8);
 }
 
 #frilydShowcase hr {
